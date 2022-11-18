@@ -34,6 +34,23 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+<script>
+	var isNS = (navigator.appName == "PN") ? 1 : 0;
+	if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+	function mischandler(){
+	return false;
+	}
+	function mousehandler(e){
+	var myevent = (isNS) ? e : event;
+	var eventbutton = (isNS) ? myevent.which : myevent.button;
+	if((eventbutton==2)||(eventbutton==3)) return false;
+	}
+	document.oncontextmenu = mischandler;
+	document.onmousedown = mousehandler;
+	document.onmouseup = mousehandler;
+	</script>
+
 </head>
 <body class="animsition">
 	
@@ -1209,10 +1226,10 @@
 					<h4 class="stext-301 cl0 p-b-30">
 						GET IN TOUCH
 					</h4>
-
+					<a href="https://goo.gl/maps/PoL6Yny2czRZBx5t5" target="_blank">
 					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at Baniyas East 08, Old Municipality Market, 7th street, Baniyas, Abu Dhabi
-					</p>
+						Any questions? Let us know in store at Baniyas East 08, Old Municipality Market, 7th street, Baniyas, Abu Dhabi.
+					</p></a>
 
 					<div class="p-t-27">
 						<a href="https://wa.me/971505400280?text=Hi, I was just on your website and I would like to get some more information please.'" target="_blank" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
